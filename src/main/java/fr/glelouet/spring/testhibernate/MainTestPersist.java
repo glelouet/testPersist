@@ -108,7 +108,7 @@ public class MainTestPersist {
 		var pj = clients.save(new Client("Pierre", "Jeantil", new Address(10000, "place des étoiles", 208558746)));
 
 		log.info("search for jean");
-		for (Client cl : clients.findByFirstNameOrLastNameIgnoreCase("jean")) {
+		for (Client cl : clients.findMatching("jean")) {
 			log.info("found " + cl);
 		}
 	}
